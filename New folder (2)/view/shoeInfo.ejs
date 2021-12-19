@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مشخصات محصول</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/style/main.css" />
+  </head>
+  <body>
+    <%- include("./common/_navbar_.ejs") %>
+    <div class="container mt-2">
+      <div class="row d-flex flex-wrap">
+        <div class="col-6 align-self-start">
+          <img src="<%= shoe.image %>" alt="عکس کفش" class="img-big" />
+        </div>
+        <div class="col-6 align-self-end">
+          <h1><%= shoe.title %></h1>
+          <p class="bg-secondary text-white p-3"><%= shoe.description %></p>
+          <p class="bg-secondary text-white p-3">سایز: <%= shoe.size %></p>
+          <p class="bg-secondary text-white p-3">رنگ: <%= shoe.color %></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
